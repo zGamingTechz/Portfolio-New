@@ -1,141 +1,298 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,300;1,400;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <!--Header-->
-        <section class="sub-header shop-header">
-            <nav>
-                <a href="index.html"><img src="logo.png"></a>
-                <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul>
-                        <li class="li">
-                            <a href="index.html">HOME</a>
-                            <a href="about.html">ABOUT</a>
-                            <a href="https://youtube.com/@GamingTechPlays">YOUTUBE</a>
-                            <a href="https://bhavyasoni.itch.io/">GAME STORE</a>
-                            <a href="shop.html">PROJECTS</a>
-                        </li>
-                    </ul>
-                </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
-            </nav>
-            <h1 style="font-size: 35px;">Projects</h1>
-            <p style="font-size: 20px;">Welcome To My Projects <br> Here Are Some Of My Best Projects <br> Take a look!</p>
-        </section>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Bhavya Soni</title>
+    <link rel="stylesheet" href="styles/style_projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <section class="sub-header">
+        <nav>
+            <a href="index.html" class="site-title">Bhavya Soni</a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="https://www.youtube.com/@GamingTechPlays">YOUTUBE</a></li>
+                    <li><a href="https://bhavyasoni.itch.io/">GAME STORE</a></li>
+                    <li><a href="shop.html">PROJECTS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="page-title">
+            <h1>Projects</h1>
+            <h3>Welcome to my projects section — take a moment to explore my work</h3>
+        </div>
+    </section>
 
+    <!-- Featured Projects -->
+    <section class="projects-section">
+        <h1 class="section-title">Featured Projects</h1>
+        <p class="section-description">Here are some projects I personally recommend</p>
 
-        <!--What I Offer-->
-        <section class="offers">
-            <h1>Featured Projects</h1>
-            <p>Here are some projects i personally recommend.</p>
-
-            <div class="row">
-                <div class="products-column">
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
                     <h3>Virtual AI Assistant</h3>
-                    <p>Created with python, tkiter, voice recogition, text to speech and llama 2 7B model.</p>
-                    <a href="https://github.com/zGamingTechz/virtualAssistant">Github Repo</a>
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>Tkinter</span>
+                        <span>LLaMa 2</span>
+                    </div>
                 </div>
-                <div class="products-column">
+                <p>Created with Python, Tkinter, voice recognition, text-to-speech and LLaMa 2 7B model.</p>
+                <div class="project-links">
+                    <a href="https://github.com/zGamingTechz/virtualAssistant" class="project-link github-link">
+                        <i class="fa fa-github"></i> View Source
+                    </a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
                     <h3>Flappy Cheems</h3>
-                    <p>Created in the unity game engine using C# combining creativity and technical skills.</p>
-                    <a href="https://github.com/zGamingTechz/Flappy-Cheems">Github Repo</a>
-                    <a href="https://bhavyasoni.itch.io/flappy-cheems">Try the game</a>
+                    <div class="tech-tags">
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>Game</span>
+                    </div>
                 </div>
-                <div class="products-column">
+                <p>Created in the Unity game engine using C# combining creativity and technical skills.</p>
+                <div class="project-links">
+                    <a href="https://github.com/zGamingTechz/Flappy-Cheems" class="project-link github-link">
+                        <i class="fa fa-github"></i> View Source
+                    </a>
+                    <a href="https://bhavyasoni.itch.io/flappy-cheems" class="project-link play-link">
+                        <i class="fa fa-gamepad"></i> Play Game
+                    </a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
                     <h3>zWormz Community Bot</h3>
-                    <p>Discord bot created using python and discord API with a custom made AI model integerated.</p>
-                    <a href="https://github.com/zGamingTechz/zwormz-community-bot">Github Repo</a>
+                    <div class="tech-tags">
+                        <span>Python</span>
+                        <span>Discord API</span>
+                        <span>AI</span>
+                    </div>
+                </div>
+                <p>Discord bot created using Python and Discord API with a custom-made AI model integrated.</p>
+                <div class="project-links">
+                    <a href="https://github.com/zGamingTechz/zwormz-community-bot" class="project-link github-link">
+                        <i class="fa fa-github"></i> View Source
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <hr>
+    <div class="section-divider"></div>
 
-        <section class="offers">
-            <h1>Other Projects</h1>
-            <p>Some more great projects for you to check out.</p>
+    <!-- Other Projects -->
+    <section class="projects-section">
+        <h1 class="section-title">Other Projects</h1>
+        <p class="section-description">Some more great projects for you to check out</p>
 
-            <div class="row">
-                <div class="products-column">
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-header">
                     <h3>SpaceInvaders Remake</h3>
-                    <p>Retro space shooter game created using the unity game engine and C#.</p>
-                    <a href="https://github.com/zGamingTechz/Space-Invaders-Remake">Github Repo</a>
-                    <a href="https://bhavyasoni.itch.io/space-invaders-remake">Try the game</a>
+                    <div class="tech-tags">
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>Retro</span>
+                    </div>
                 </div>
-                <div class="products-column">
+                <p>Retro space shooter game created using the Unity game engine and C#.</p>
+                <div class="project-links">
+                    <a href="https://github.com/zGamingTechz/Space-Invaders-Remake" class="project-link github-link">
+                        <i class="fa fa-github"></i> View Source
+                    </a>
+                    <a href="https://bhavyasoni.itch.io/space-invaders-remake" class="project-link play-link">
+                        <i class="fa fa-gamepad"></i> Play Game
+                    </a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
                     <h3>Chatting App</h3>
-                    <p>Created for android using dart with the flutter framework along with firebase for database and auth.</p>
+                    <div class="tech-tags">
+                        <span>Flutter</span>
+                        <span>Dart</span>
+                        <span>Firebase</span>
+                    </div>
                 </div>
-                <div class="products-column">
+                <p>Created for Android using Dart with the Flutter framework along with Firebase for database and auth.</p>
+                <div class="project-links">
+                    <a href="#" class="project-link disabled">
+                        <i class="fa fa-lock"></i> Private Project
+                    </a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-header">
                     <h3>The Jumping Game</h3>
-                    <p>Classical 2D arcade game created using the unity game engine and C#.</p>
-                    <a href="https://bhavyasoni.itch.io/the-jumping-game">Try the game</a>
+                    <div class="tech-tags">
+                        <span>Unity</span>
+                        <span>C#</span>
+                        <span>Arcade</span>
+                    </div>
+                </div>
+                <p>Classical 2D arcade game created using the Unity game engine and C#.</p>
+                <div class="project-links">
+                    <a href="https://bhavyasoni.itch.io/the-jumping-game" class="project-link play-link">
+                        <i class="fa fa-gamepad"></i> Play Game
+                    </a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <hr>
+    <div class="section-divider"></div>
 
-        <section class="offers">
-            <h1>Upcoming Projects</h1>
-            <p>Here are some projects I'm currently working on.</p>
+    <!-- Upcoming Projects -->
+    <section class="projects-section">
+        <h1 class="section-title">Upcoming Projects</h1>
+        <p class="section-description">Here are some projects I'm currently working on</p>
 
-            <div class="row">
-                <div class="products-column">
+        <div class="projects-grid">
+            <div class="project-card upcoming">
+                <div class="project-header">
                     <h3>Lost Friends</h3>
-                    <p>A 3D horror story game.</p>
+                    <div class="tech-tags">
+                        <span>3D</span>
+                        <span>Horror</span>
+                    </div>
                 </div>
-                <div class="products-column">
+                <p>A 3D horror story game. Coming soon.</p>
+                <div class="project-status">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%"></div>
+                    </div>
+                    <span>65% Complete</span>
+                </div>
+            </div>
+            
+            <div class="project-card upcoming">
+                <div class="project-header">
                     <h3>Mansio De Terror</h3>
-                    <p>A 2D horror novel like choice based game.</p>
+                    <div class="tech-tags">
+                        <span>2D</span>
+                        <span>Horror</span>
+                        <span>Novel</span>
+                    </div>
                 </div>
-                <div class="products-column">
+                <p>A 2D horror novel-like choice-based game.</p>
+                <div class="project-status">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 40%"></div>
+                    </div>
+                    <span>40% Complete</span>
+                </div>
+            </div>
+            
+            <div class="project-card upcoming secret">
+                <div class="project-header">
                     <h3>Amiverse</h3>
-                    <p>Confidential.</p>
+                    <div class="tech-tags">
+                        <span>Secret</span>
+                    </div>
+                </div>
+                <p>Confidential project. Details coming soon.</p>
+                <div class="project-status">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 25%"></div>
+                    </div>
+                    <span>25% Complete</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <hr>
+    <div class="section-divider"></div>
 
-        <!--Footer-->
-        <section class="footer">
-            <h4>Thanks For Visiting!</h4>
-            <p>
-               For Business Enquiry- <br>
-               Email- rkumarbhavy@gmail.com <br>
-               Currently Working For <a href="https://tenreck.com/">Tenreck</a>.
-            </p>
-            <br>
-            <h5>-Find Me Here-</h5>
-            <div class="icons">
-                <a href="https://www.youtube.com/@gamingtechplays"><i class="fa fa-youtube"></i></a>
-                <a href="https://github.com/zGamingTechz"><i class="fa fa-git"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-instagram"></i></a>
-                <a href=""><i class="fa fa-twitter"></i></a>
-            </div>
-            <p>Created With <i class="fa fa-heart-o"></i> By  Gaming Tech</p>
-        </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <h4>Thanks For Visiting!</h4>
+        <p>
+           For Business Enquiry:<br>
+           Email: rkumarbhavy@gmail.com<br>
+           Currently Working For <a href="https://www.linkedin.com/company/amiverse" class="text-link">AmiVerse</a>.
+        </p>
+        <h5>- Find Me Here -</h5>
+        <div class="icons">
+            <a href="https://www.youtube.com/@gamingtechplays"><i class="fa fa-youtube"></i></a>
+            <a href="https://github.com/zGamingTechz"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+        <p>Created With <i class="fa fa-heart-o"></i> By Gaming Tech</p>
+    </footer>
 
-        <!--JavaScript For Toggle Menu-->
-        <script>
-            var navLinks = document.getElementById("navLinks");
-            function showMenu(){
-                navLinks.style.right = "0"; 
+    <!-- JavaScript For Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        
+        function showMenu() {
+            navLinks.style.right = "0";
+            document.body.classList.add("menu-active");
+        }
+        
+        function hideMenu() {
+            navLinks.style.right = "-250px";
+            document.body.classList.remove("menu-active");
+        }
+        
+        // Close menu when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const isNavLink = event.target.closest('.nav-links');
+            const isMenuButton = event.target.closest('.fa-bars');
+            
+            if (!isNavLink && !isMenuButton && window.innerWidth <= 700 && navLinks.style.right === "0px") {
+                hideMenu();
             }
-            function hideMenu(){
-                navLinks.style.right = "-200px";
+        });
+        
+        // Close menu when clicking on a navigation link
+        const navItems = document.querySelectorAll('.nav-links ul li a');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 700) {
+                    hideMenu();
+                }
+            });
+        });
+        
+        // Animate project cards on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectCards = document.querySelectorAll('.project-card');
+            
+            function checkScroll() {
+                projectCards.forEach(card => {
+                    const cardPosition = card.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if (cardPosition < screenPosition) {
+                        card.classList.add('show');
+                    }
+                });
             }
-        </script>
-    </body>
+            
+            window.addEventListener('scroll', checkScroll);
+            checkScroll(); // Check on initial load
+        });
+    </script>
+</body>
 </html>
