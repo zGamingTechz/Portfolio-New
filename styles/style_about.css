@@ -1,0 +1,477 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Serif Pro', serif;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #f9f9f9;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    padding: 1.5rem 6%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.site-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(0, 255, 200);
+    text-decoration: none;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-links ul li {
+    list-style: none;
+    margin-left: 1.5rem;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: rgb(0, 255, 200);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.nav-links ul li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.nav-links ul li a:hover::after {
+    width: 100%;
+}
+
+nav .fa {
+    display: none;
+}
+
+/* Sub-header Section */
+.sub-header {
+    height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../images/about.jpeg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.page-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+.page-title h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.page-title h3 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* About Me Section */
+.about-me {
+    width: 80%;
+    margin: auto;
+    padding: 5rem 0 3rem;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col {
+    flex-basis: 48%;
+    padding: 1rem;
+}
+
+.about-col img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-col img:hover {
+    transform: scale(1.02);
+}
+
+.about-col h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #000000;
+    font-weight: bolder;
+}
+
+.about-col p {
+    color: #555;
+    font-size: 1.0rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: #f44336;
+    border: 1px solid #f44336;
+    border-radius: 4px;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.youtube-button {
+    background: transparent;
+}
+
+.button:hover {
+    background: rgba(244, 67, 54, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(244, 67, 54, 0.1);
+}
+
+/* What I Do Section */
+.me {
+    width: 85%;
+    margin: 2rem auto 4rem;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.me h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.me p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+}
+
+.me-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.me-col img {
+    width: 100%;
+    display: block;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.me-col:hover img {
+    transform: scale(1.1);
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(52, 255, 177, 0.3);
+}
+
+.layer h3 {
+    width: 100%;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    font-size: 1.8rem;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.layer:hover h3 {
+    bottom: 45%;
+    opacity: 1;
+}
+
+/* Footer Section */
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 3rem 0;
+    background: #f1f1f1;
+}
+
+.footer h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.footer p {
+    color: #666;
+    line-height: 1.7;
+    margin: 0.8rem auto;
+    max-width: 600px;
+}
+
+.footer h5 {
+    font-size: 1.2rem;
+    margin: 2rem 0 1rem;
+    color: #444;
+}
+
+.text-link {
+    color: #f44336;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+.icons {
+    margin: 1.5rem 0;
+}
+
+.icons .fa {
+    color: tomato;
+    margin: 0 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.icons .fa:hover {
+    color: #f44336;
+    transform: translateY(-5px);
+}
+
+.fa-heart-o {
+    color: rgb(255, 38, 0);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Media Queries for Responsive Design */
+@media(max-width: 900px) {
+    .page-title h1 {
+        font-size: 2.5rem;
+    }
+    
+    .about-col h1 {
+        font-size: 2rem;
+    }
+}
+
+@media(max-width: 700px) {
+    .page-title h1 {
+        font-size: 2rem;
+    }
+    
+    .page-title h3 {
+        font-size: 1rem;
+    }
+    
+    .row {
+        flex-direction: column-reverse;
+    }
+    
+    .about-col {
+        flex-basis: 100%;
+    }
+    
+    .about-col p {
+        font-size: 1rem;
+    }
+    
+    .me-col {
+        flex-basis: 100%;
+    }
+    
+    .nav-links ul {
+        display: block;
+    }
+    
+    .nav-links ul li {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav-links ul li a {
+        display: block;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 255, 200, 0.2);
+        text-align: left;
+    }
+    
+    .nav-links ul li a::after {
+        display: none;
+    }
+    
+    .nav-links ul li a:hover {
+        background-color: rgba(0, 255, 200, 0.1);
+    }
+    
+    .nav-links {
+        position: fixed;
+        background: rgba(20, 40, 30, 0.95);
+        height: 100vh;
+        width: 250px;
+        top: 0;
+        right: -250px;
+        text-align: left;
+        z-index: 10;
+        transition: 0.3s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+    
+    .nav-links:before {
+        content: "Menu";
+        display: block;
+        padding: 1.5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: rgb(0, 255, 200);
+        border-bottom: 2px solid rgba(0, 255, 200, 0.3);
+        text-align: center;
+    }
+    
+    nav .fa {
+        display: block;
+        color: rgb(0, 255, 200);
+        font-size: 24px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    nav .fa:hover {
+        transform: scale(1.1);
+    }
+    
+    .fa-bars {
+        padding: 10px;
+    }
+    
+    .fa-times {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(0, 255, 200, 0.3);
+    }
+    
+    .nav-links ul {
+        padding: 0;
+        margin-top: 1rem;
+    }
+    
+    /* Add this to create a subtle overlay when menu is open */
+    body.menu-active:before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 5;
+    }
+}
+
+@media(max-width: 480px) {
+    .sub-header {
+        height: 40vh;
+    }
+    
+    .page-title h1 {
+        font-size: 1.7rem;
+    }
+    
+    .about-me, .me {
+        width: 90%;
+    }
+    
+    .about-col h1 {
+        font-size: 1.8rem;
+    }
+    
+    .button {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .me h1 {
+        font-size: 1.8rem;
+    }
+    
+    .me p {
+        font-size: 0.9rem;
+    }
+}

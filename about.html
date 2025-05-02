@@ -1,123 +1,137 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,300;1,400;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-
-    <body>
-
-        <!--Header-->
-        <section class="sub-header">
-
-            <nav>
-                <a href="index.html"><img style="width: 400px;" src="logo.png"></a>
-                <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul>
-                        <li class="li">
-                            <a href="index.html">HOME</a>
-                            <a href="about.html">ABOUT</a>
-                            <a href="https://www.youtube.com/@GamingTechPlays">YOUTUBE</a>
-                            <a href="https://bhavyasoni.itch.io/">GAME STORE</a>
-                            <a href="shop.html">PROJECTS</a>
-                        </li>
-                    </ul>
-                </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
-            </nav>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Bhavya Soni</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/style_about.css">
+</head>
+<body>
+    <!-- Header -->
+    <section class="sub-header">
+        <nav>
+            <a href="index.html" class="site-title">Bhavya Soni</a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="https://www.youtube.com/@GamingTechPlays">YOUTUBE</a></li>
+                    <li><a href="https://bhavyasoni.itch.io/">GAME STORE</a></li>
+                    <li><a href="shop.html">PROJECTS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="page-title">
             <h1>About Me</h1>
             <h3>Here's some information about myself</h3>
-        </section>
+        </div>
+    </section>
 
-        <!--About Me Content-->
-        <section class="about-me">
-            <div class="row">
-                <div class="about-col">
-                    <h1>I'm Bhavya Soni</h1>
-                    <p>A passionate Computer Science student focused on AI, Machine Learning, and Game Development.
-                        Skilled in TensorFlow, Python, and Data Science, I’ve built projects like an AI Virtual Private Assistant Image Classifier,
-                        Face Recognition System and various Unity games,
-                        including a Flappy Bird clone and retro shooters.
-                        <br>
-                        Beyond AI, I'm an experienced Discord bot developer, creating bots for large communities—from chatbots
-                        to hardware comparison tools. I’m currently working on a large-scale horror game and constantly exploring new
-                        ways to innovate.</p>
-                    <a href="https://www.youtube.com/@GamingTechPlays" class="button youtube-button">Youtube</a>
-                </div>
-                <div class="about-col">
-                    <img src="aboutMe.jpeg">
+    <!-- About Me Content -->
+    <section class="about-me">
+        <div class="row">
+            <div class="about-col">
+                <h1>I'm Bhavya Soni</h1>
+                <p>A passionate Computer Science student focused on AI, Machine Learning, and Game Development.
+                    Skilled in TensorFlow, Python, and Data Science, I've built projects like an AI Virtual Private Assistant Image Classifier,
+                    Face Recognition System and various Unity games,
+                    including a Flappy Bird clone and retro shooters.</p>
+                <p>Beyond AI, I'm an experienced Discord bot developer, creating bots for large communities—from chatbots
+                    to hardware comparison tools. I'm currently working on a large-scale horror game and constantly exploring new
+                    ways to innovate.</p>
+                <a href="https://www.youtube.com/@GamingTechPlays" class="button youtube-button">Check my YouTube</a>
+            </div>
+            <div class="about-col">
+                <img src="images/aboutMe.jpeg" alt="Bhavya Soni">
+            </div>
+        </div>
+    </section>
+
+    <!-- What Am I Section -->
+    <section class="me">
+        <h1>What I Am</h1>
+        <p>Here are some of my main areas of expertise</p>
+
+        <div class="row">
+            <div class="me-col">
+                <img src="images/gaming2.jpg" alt="Gaming">
+                <div class="layer">
+                    <h3>Gamer</h3>
                 </div>
             </div>
-        </section>
-
-        <hr>
-
-        <!--What Am I?-->
-        <section class="me">
-            <h1>What I Am</h1>
-            <p>Below Are Some Pictures Showing What I Do<br>(Tbh Idk What To Write)</p>
-
-            <div class="row">
-                <div class="me-col">
-                    <img src="gaming2.jpg">
-                    <div class="layer">
-                        <h3>Gamer</h3>
-                    </div>
-                </div>
-                <div class="me-col">
-                    <img src="programming.jpg">
-                    <div class="layer">
-                        <h3>Programmer</h3>
-                    </div>
-                </div>
-                <div class="me-col">
-                    <img src="editing.jpg">
-                    <div class="layer">
-                        <h3>Editor</h3>
-                    </div>
+            <div class="me-col">
+                <img src="images/programming.jpg" alt="Programming">
+                <div class="layer">
+                    <h3>Programmer</h3>
                 </div>
             </div>
-        </section>
-
-        <hr>
-
-        <!--Footer-->
-        <section class="footer">
-            <h4>Thanks For Visiting!</h4>
-            <p>
-               For Business Enquiry- <br>
-               Email- rkumarbhavy@gmail.com <br>
-               Currently Working For <a href="https://tenreck.com/">Tenreck</a>.
-            </p>
-            <br>
-            <h5>-Find Me Here-</h5>
-            <div class="icons">
-                <a href="https://www.youtube.com/@gamingtechplays"><i class="fa fa-youtube"></i></a>
-                <a href="https://github.com/zGamingTechz"><i class="fa fa-git"></i></a>
-                <a href=""><i class="fa fa-facebook"></i></a>
-                <a href=""><i class="fa fa-instagram"></i></a>
-                <a href=""><i class="fa fa-twitter"></i></a>
+            <div class="me-col">
+                <img src="images/editing.jpg" alt="Editing">
+                <div class="layer">
+                    <h3>Editor</h3>
+                </div>
             </div>
-            <p>Created With <i class="fa fa-heart-o"></i> By  Gaming Tech</p>
-        </section>
+        </div>
+    </section>
 
-        <!--JavaScript For Toggle Menu-->
-        <script>
-            var navLinks = document.getElementById("navLinks");
-            function showMenu(){
-                navLinks.style.right = "0"; 
+    <!-- Footer -->
+    <footer class="footer">
+        <h4>Thanks For Visiting!</h4>
+        <p>
+           For Business Enquiry:<br>
+           Email: rkumarbhavy@gmail.com<br>
+           Currently Working For <a href="https://tenreck.com/" class="text-link">Tenreck</a>.
+        </p>
+        <h5>- Find Me Here -</h5>
+        <div class="icons">
+            <a href="https://www.youtube.com/@gamingtechplays"><i class="fa fa-youtube"></i></a>
+            <a href="https://github.com/zGamingTechz"><i class="fa fa-github"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+        </div>
+        <p>Created With <i class="fa fa-heart-o"></i> By Gaming Tech</p>
+    </footer>
+
+    <!-- JavaScript For Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        
+        function showMenu() {
+            navLinks.style.right = "0";
+            document.body.classList.add("menu-active");
+        }
+        
+        function hideMenu() {
+            navLinks.style.right = "-250px";
+            document.body.classList.remove("menu-active");
+        }
+        
+        // Close menu when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const isNavLink = event.target.closest('.nav-links');
+            const isMenuButton = event.target.closest('.fa-bars');
+            
+            if (!isNavLink && !isMenuButton && window.innerWidth <= 700 && navLinks.style.right === "0px") {
+                hideMenu();
             }
-            function hideMenu(){
-                navLinks.style.right = "-200px";
-            }
-        </script>
-    </body>
-                <i class="fa fa-youtube"></i>
+        });
+        
+        // Close menu when clicking on a navigation link
+        const navItems = document.querySelectorAll('.nav-links ul li a');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 700) {
+                    hideMenu();
+                }
+            });
+        });
+    </script>
+</body>
 </html>
