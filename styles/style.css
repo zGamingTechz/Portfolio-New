@@ -63,7 +63,7 @@ nav {
     content: "";
     width: 0;
     height: 2px;
-    background: #f44336;
+    background: #00ff00;
     display: block;
     margin: auto;
     transition: 0.3s;
@@ -178,7 +178,7 @@ nav .fa {
     
     .nav-links {
         position: fixed;
-        background: rgba(20, 40, 30, 0.95);
+        background: rgba(4, 9, 30, 0.95);
         height: 100vh;
         width: 250px;
         top: 0;
@@ -189,6 +189,7 @@ nav .fa {
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
+        border-left: 1px solid rgba(0, 255, 200, 0.15);
     }
     
     .nav-links:before {
@@ -198,7 +199,7 @@ nav .fa {
         font-size: 1.5rem;
         font-weight: 600;
         color: rgb(0, 255, 200);
-        border-bottom: 2px solid rgba(0, 255, 200, 0.3);
+        border-bottom: 1px solid rgba(0, 255, 200, 0.3);
         text-align: center;
     }
     
@@ -237,7 +238,6 @@ nav .fa {
         margin-top: 1rem;
     }
     
-    /* Add this to create a subtle overlay when menu is open */
     body.menu-active:before {
         content: "";
         position: fixed;
