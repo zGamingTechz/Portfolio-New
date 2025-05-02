@@ -8,6 +8,12 @@
 body {
     overflow-x: hidden;
     background-color: #f9f9f9;
+    overflow-y: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 0px;
+    display: none;
 }
 
 /* Navigation Styles */
