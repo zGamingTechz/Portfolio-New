@@ -1,55 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portfolio</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,300;1,400;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-
-        <!--Header-->
-        <section class="header">
-            <nav>
-                <a href="index.html"><img src="logo.png"></a>
-                <div class="nav-links" id="navLinks">
-                    <i class="fa fa-times" onclick="hideMenu()"></i>
-                    <ul>
-                        <li class="li">
-                            <a href="index.html">HOME</a>
-                            <a href="about.html">ABOUT</a>
-                            <a href="https://youtube.com/@GamingTechPlays">YOUTUBE</a>
-                            <a href="https://bhavyasoni.itch.io/">GAME STORE</a>
-                            <a href="shop.html">PROJECTS</a>
-                        </li>
-                    </ul>
-                </div>
-                <i class="fa fa-bars" onclick="showMenu()"></i>
-            </nav>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhavya Soni - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <section class="header">
+        <nav>
+            <a href="index.html" class="site-title">Bhavya Soni</a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="https://youtube.com/@GamingTechPlays">YOUTUBE</a></li>
+                    <li><a href="https://bhavyasoni.itch.io/">GAME STORE</a></li>
+                    <li><a href="shop.html">PROJECTS</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
         <div class="text-box">
-            <h1>Hi I'm Bhavya Soni</h1>
-            <p>I'm A Python & Game Developer With An Interest In Machine Learning & Artificial Intelligence. <br>
-               I Can Work With Python, C, C#, C++, Dart, JavaScript (Still Learning), <br>
-               Unity, SQL And OfCouse HTML And CSS.
-            </p>
+            <h1>Hi, I'm Bhavya Soni</h1>
+            <p>I'm a Python & Game Developer with an interest in Machine Learning & Artificial Intelligence.</p>
+            <p class="skills">I can work with Python, C, C#, C++, Dart, JavaScript, Unity, SQL and of course HTML and CSS.</p>
             <a href="mailto:imbhavyasoni@gmail.com" class="button">Contact Me</a>
         </div>
-        </section>
-        
+    </section>
 
-        <!--JavaScript For Toggle Menu-->
-        <script>
-            var navLinks = document.getElementById("navLinks");
-            function showMenu(){
-                navLinks.style.right = "0"; 
-            }
-            function hideMenu(){
-                navLinks.style.right = "-200px";
-            }
-        </script>
+    <!-- JavaScript For Toggle Menu -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
         
-    </body>
+        function showMenu() {
+            navLinks.style.right = "0";
+            document.body.classList.add("menu-active");
+        }
+        
+        function hideMenu() {
+            navLinks.style.right = "-250px";
+            document.body.classList.remove("menu-active");
+        }
+        
+        // Close menu when clicking outside on mobile
+        document.addEventListener('click', function(event) {
+            const isNavLink = event.target.closest('.nav-links');
+            const isMenuButton = event.target.closest('.fa-bars');
+            
+            if (!isNavLink && !isMenuButton && window.innerWidth <= 700 && navLinks.style.right === "0px") {
+                hideMenu();
+            }
+        });
+        
+        // Close menu when clicking on a navigation link
+        const navItems = document.querySelectorAll('.nav-links ul li a');
+        navItems.forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth <= 700) {
+                    hideMenu();
+                }
+            });
+        });
+    </script>
+</body>
 </html>
