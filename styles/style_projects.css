@@ -108,6 +108,7 @@ nav .fa {
     width: 85%;
     height: 1px;
     background: linear-gradient(to right, transparent, rgb(0, 0, 0), transparent);
+    margin: 0 auto;
 }
 
 /* Projects Section */
